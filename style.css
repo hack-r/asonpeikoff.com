@@ -28,6 +28,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
     margin: 0;
     background: var(--paper);
@@ -50,7 +52,10 @@ a { color: inherit; }
     padding-inline: var(--gutter);
 }
 
-section { padding-block: clamp(3rem, 8vw, 5.5rem); }
+section {
+    padding-block: clamp(3rem, 8vw, 5.5rem);
+    scroll-margin-top: 1rem;
+}
 
 .rule { border-top: 1px solid var(--rule); }
 
@@ -142,9 +147,13 @@ section { padding-block: clamp(3rem, 8vw, 5.5rem); }
 }
 
 .portrait {
-    margin: 0;
-    aspect-ratio: 4 / 5;
+    /* The source portrait is a circular crop, so it gets a circular frame and
+       is never re-cropped; capped so a modest source is not upscaled. */
+    width: min(100%, 20rem);
+    margin: 0 auto;
+    aspect-ratio: 1;
     overflow: hidden;
+    border-radius: 50%;
     border: 1px solid var(--rule);
 }
 
@@ -152,7 +161,7 @@ section { padding-block: clamp(3rem, 8vw, 5.5rem); }
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     filter: grayscale(100%) contrast(1.05);
     transition: filter 0.6s ease;
 }
@@ -232,52 +241,25 @@ footer {
 }
 
 footer .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 2rem;
-    justify-content: space-between;
-    align-items: center;
     padding-block: 2rem;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
     color: var(--ink-soft);
 }
 
-.elsewhere {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
-    font-size: 0.72rem;
-}
-
-.elsewhere a {
-    text-decoration: none;
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 2px;
-    transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.elsewhere a:hover,
-.elsewhere a:focus-visible {
-    color: var(--ink);
-    border-bottom-color: var(--accent);
-}
+footer p { margin: 0; }
 
 /* ---------- responsive ---------- */
 
 @media (max-width: 760px) {
     .hero .wrap { grid-template-columns: 1fr; }
-    .portrait { order: -1; max-width: 16rem; aspect-ratio: 1 / 1; }
+    .portrait { order: -1; width: min(100%, 14rem); margin-inline: 0; }
     .entry { grid-template-columns: 1fr; }
     .entry-note { grid-column: 1; }
     .entry-kind { padding-top: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
     * { transition: none !important; }
 }
