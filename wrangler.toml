@@ -1,0 +1,8 @@
+name = "asonpeikoff"
+main = "src/index.js"
+compatibility_date = "2023-12-01"
+
+[env.production]
+routes = [
+  { pattern = "asonpeikoff.com", zone_name = "asonpeikoff.com" }
+]
