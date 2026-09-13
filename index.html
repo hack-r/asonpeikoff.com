@@ -4,76 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ason Peikoff</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Ason Peikoff — applied computational scientist. Work in machine learning, philosophy, and fiction.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="canonical" href="https://asonpeikoff.com/">
+    <meta property="og:title" content="Ason Peikoff">
+    <meta property="og:description" content="Applied computational scientist. Machine learning, philosophy, fiction.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://asonpeikoff.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <h1 class="logo">Ason Peikoff</h1>
-                <ul class="nav-menu">
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+    <header class="masthead">
+        <div class="wrap">
+            <p class="wordmark"><a href="/">Ason Peikoff</a></p>
+            <ul class="nav">
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#elsewhere">Elsewhere</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h2>Applied Computational Scientist</h2>
-                <p>Philosophy. Society. Fiction.</p>
-            </div>
-            <div class="hero-image">
-                <img src="https://github.com/user-attachments/assets/dd6abc66-0dcd-4f66-8f68-05b65bc55f12" alt="Portrait">
-            </div>
-        </section>
-
-        <section id="work" class="work">
-            <h3>Work</h3>
-            <div class="work-grid">
-                <div class="work-item">
-                    <h4>Computational Science</h4>
-                    <p>Applied research and methodology development</p>
+            <div class="wrap">
+                <div>
+                    <p class="eyebrow">Applied Computational Scientist</p>
+                    <h1>Ason<br>Peikoff</h1>
+                    <p class="lede">Machine learning and data science. Philosophy. Fiction.</p>
                 </div>
-                <div class="work-item">
-                    <h4>Philosophy & Society</h4>
-                    <p>Essays on ideas that shape culture and civilization</p>
-                </div>
-                <div class="work-item">
-                    <h4>Fiction</h4>
-                    <p>Narrative exploration of complex themes</p>
-                </div>
+                <figure class="portrait">
+                    <img src="https://github.com/user-attachments/assets/dd6abc66-0dcd-4f66-8f68-05b65bc55f12" alt="Portrait of Ason Peikoff" width="800" height="1000">
+                </figure>
             </div>
         </section>
 
-        <section id="about" class="about">
-            <h3>About</h3>
-            <p>Ason Peikoff is an applied computational scientist exploring the intersection of rigorous methodology, philosophical inquiry, and narrative expression. His work spans computational systems, culture, and the written word.</p>
+        <section id="work" class="rule">
+            <div class="wrap">
+                <h2 class="section-title">Selected Work</h2>
+                <div class="index">
+                    <a class="entry" href="https://github.com/hack-r/pyserpZotero">
+                        <span class="entry-kind">Research tooling</span>
+                        <span class="entry-title">pyserpZotero</span>
+                        <p class="entry-note">Automated literature search, BibTeX export, and Zotero cloud sync.</p>
+                    </a>
+                    <a class="entry" href="https://github.com/hack-r/GPT-Swarm">
+                        <span class="entry-kind">Machine learning</span>
+                        <span class="entry-title">GPT-Swarm</span>
+                        <p class="entry-note">Decomposing problems across a swarm of cooperating language models.</p>
+                    </a>
+                    <a class="entry" href="https://github.com/hack-r/theVault-Darknet-Market">
+                        <span class="entry-kind">Fiction, built</span>
+                        <span class="entry-title">theVault</span>
+                        <p class="entry-note">A working implementation of the marketplace from Kira Peikoff's <em>Baby X</em>.</p>
+                    </a>
+                    <a class="entry" href="https://github.com/hack-r?tab=repositories">
+                        <span class="entry-kind">Archive</span>
+                        <span class="entry-title">All repositories</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about rule">
+            <div class="wrap">
+                <h2 class="section-title">About</h2>
+                <p>I build applied machine learning systems, and I write — on philosophy, on society, and in fiction.</p>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <ul>
-                    <li><a href="https://github.com/hack-r">GitHub</a></li>
-                    <li><a href="https://twitter.com">Twitter</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>More</h4>
-                <ul>
-                    <li><a href="#">Essays</a></li>
-                    <li><a href="#">Projects</a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Ason Peikoff</p>
-            </div>
+    <footer id="elsewhere">
+        <div class="wrap">
+            <ul class="elsewhere">
+                <li><a href="https://github.com/hack-r">GitHub</a></li>
+            </ul>
+            <p>&copy; 2026 Ason Peikoff</p>
         </div>
     </footer>
 </body>
