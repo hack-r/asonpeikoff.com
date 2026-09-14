@@ -337,7 +337,7 @@ const html = `<!DOCTYPE html>
         }
     </style>
 </head>
-<body data-git-commit="e946552efcf226ac3ce62a2327ad2f76bfb248aa">
+<body data-git-commit="b7498f22bd053ef14807eed9602db61ae08f5732">
     <header class="masthead">
         <div class="wrap">
             <p class="wordmark"><a href="/">Ason Peikoff</a></p>
@@ -469,8 +469,13 @@ const html = `<!DOCTYPE html>
             <div class="wrap">
                 <h2 class="section-title">Elsewhere</h2>
                 <div class="index">
+                    <a class="entry" href="https://www.zotero.org/hackr/items">
+                        <span class="entry-kind">Library</span>
+                        <span class="entry-title">Zotero</span>
+                        <p class="entry-note">Public research library on philosophy, economics, and intellectual history.</p>
+                    </a>
                     <a class="entry" href="https://whoneeds.it">
-                        <span class="entry-kind">Design</span>
+                        <span class="entry-kind">Objectivism</span>
                         <span class="entry-title">Who Needs It</span>
                     </a>
                     <a class="entry" href="https://github.com/hack-r">
