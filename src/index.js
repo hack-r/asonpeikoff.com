@@ -216,7 +216,7 @@ const html = `<!DOCTYPE html>
         .marquee {
             display: flex;
             gap: 2rem;
-            animation: scroll 60s linear infinite;
+            animation: scroll 40s linear infinite;
             white-space: nowrap;
         }
 
@@ -368,10 +368,35 @@ const html = `<!DOCTYPE html>
                 <h2 class="section-title">Selected Work</h2>
                 <div class="marquee-container">
                     <div class="marquee">
-                        <a href="https://github.com/hack-r/1337_Streamer_for_StackApps" class="marquee-item">1337_Streamer</a>
-                        <a href="https://github.com/hack-r/60seconds_to_deeplearning" class="marquee-item">60s_DeepLearning</a>
-                        <a href="https://github.com/hack-r/academicpages.github.io" class="marquee-item">academicpages</a>
+                        <a href="https://github.com/hack-r/parlerbot" class="marquee-item">parlerbot</a>
+                        <a href="https://github.com/hack-r/pyserpZotero" class="marquee-item">pyserpZotero</a>
+                        <a href="https://github.com/hack-r/bossbox" class="marquee-item">bossbox</a>
+                        <a href="https://github.com/hack-r/ILANA1" class="marquee-item">ILANA1</a>
+                        <a href="https://github.com/hack-r/GPT-Swarm" class="marquee-item">GPT_Swarm</a>
+                        <a href="https://github.com/hack-r/coursera_shiny" class="marquee-item">coursera_shiny</a>
+                        <a href="https://github.com/hack-r/DNS_spykiller" class="marquee-item">DNS_spykiller</a>
+                        <a href="https://github.com/hack-r/LifeVantage" class="marquee-item">LifeVantage</a>
+                        <a href="https://github.com/hack-r/MMEES" class="marquee-item">MMEES</a>
                         <a href="https://github.com/hack-r/alienDB-public" class="marquee-item">alienDB</a>
+                        <a href="https://github.com/hack-r/ChatGPT_for_Jupyter" class="marquee-item">ChatGPT_Jupyter</a>
+                        <a href="https://github.com/hack-r/kaggle_telstra" class="marquee-item">kaggle_telstra</a>
+                        <a href="https://github.com/hack-r/Google-EmailScraper-Reloaded" class="marquee-item">email_scraper</a>
+                        <a href="https://github.com/hack-r/gptswaRm" class="marquee-item">gptswaRm</a>
+                        <a href="https://github.com/hack-r/RMapsDemo" class="marquee-item">RMapsDemo</a>
+                        <a href="https://github.com/hack-r/simple_dist_matching_paradox" class="marquee-item">matching_paradox</a>
+                        <a href="https://github.com/hack-r/60seconds_to_deeplearning" class="marquee-item">60s_DeepLearning</a>
+                        <a href="https://github.com/hack-r/csv_to_dynamodb" class="marquee-item">csv_dynamodb</a>
+                        <a href="https://github.com/hack-r/dartML" class="marquee-item">dartML</a>
+                        <a href="https://github.com/hack-r/Harden_Ubuntu_VPS" class="marquee-item">Harden_Ubuntu</a>
+                        <a href="https://github.com/hack-r/japi" class="marquee-item">japi</a>
+                        <a href="https://github.com/hack-r/milleR" class="marquee-item">milleR</a>
+                        <a href="https://github.com/hack-r/noisyCricket" class="marquee-item">noisyCricket</a>
+                        <a href="https://github.com/hack-r/pirate" class="marquee-item">pirate</a>
+                        <a href="https://github.com/hack-r/quick_dirty_response_model" class="marquee-item">response_model</a>
+                        <a href="https://github.com/hack-r/realtime-hud" class="marquee-item">realtime_hud</a>
+                        <a href="https://github.com/hack-r/stackoverflow_comment_sentiment_analysis" class="marquee-item">SO_sentiment</a>
+                        <a href="https://github.com/hack-r/summary.likert.hackr" class="marquee-item">likert_summary</a>
+                        <a href="https://github.com/hack-r/academicpages.github.io" class="marquee-item">academicpages</a>
                         <a href="https://github.com/hack-r/ArchiveHaunter" class="marquee-item">ArchiveHaunter</a>
                         <a href="https://github.com/hack-r/arxiv.py" class="marquee-item">arxiv.py</a>
                         <a href="https://github.com/hack-r/asonpeikoff.com" class="marquee-item">asonpeikoff.com</a>
@@ -382,76 +407,13 @@ const html = `<!DOCTYPE html>
                         <a href="https://github.com/hack-r/awesome-chatgpt-prompts" class="marquee-item">chatgpt_prompts</a>
                         <a href="https://github.com/hack-r/BetterDoS" class="marquee-item">BetterDoS</a>
                         <a href="https://github.com/hack-r/blsAPI" class="marquee-item">blsAPI</a>
-                        <a href="https://github.com/hack-r/bossbox" class="marquee-item">bossbox</a>
-                        <a href="https://github.com/hack-r/caffe" class="marquee-item">caffe</a>
-                        <a href="https://github.com/hack-r/CaptureURI" class="marquee-item">CaptureURI</a>
-                        <a href="https://github.com/hack-r/caret" class="marquee-item">caret</a>
-                        <a href="https://github.com/hack-r/ChatGPT_for_Jupyter" class="marquee-item">ChatGPT_Jupyter</a>
-                        <a href="https://github.com/hack-r/competitive-data-science" class="marquee-item">comp_datascience</a>
-                        <a href="https://github.com/hack-r/coursera-test" class="marquee-item">coursera_test</a>
-                        <a href="https://github.com/hack-r/coursera_angular" class="marquee-item">coursera_angular</a>
-                        <a href="https://github.com/hack-r/coursera_shiny" class="marquee-item">coursera_shiny</a>
-                        <a href="https://github.com/hack-r/csv_to_dynamodb" class="marquee-item">csv_dynamodb</a>
-                        <a href="https://github.com/hack-r/dartML" class="marquee-item">dartML</a>
-                        <a href="https://github.com/hack-r/data_science_box" class="marquee-item">data_science_box</a>
-                        <a href="https://github.com/hack-r/DeDup" class="marquee-item">DeDup</a>
-                        <a href="https://github.com/hack-r/DNS_spykiller" class="marquee-item">DNS_spykiller</a>
-                        <a href="https://github.com/hack-r/fast_rgf" class="marquee-item">fast_rgf</a>
-                        <a href="https://github.com/hack-r/findFit" class="marquee-item">findFit</a>
-                        <a href="https://github.com/hack-r/gemma4good" class="marquee-item">gemma4good</a>
-                        <a href="https://github.com/hack-r/getting_cleaning_project" class="marquee-item">data_cleaning</a>
-                        <a href="https://github.com/hack-r/google-bard-api" class="marquee-item">bard_api</a>
-                        <a href="https://github.com/hack-r/Google-EmailScraper-Reloaded" class="marquee-item">email_scraper</a>
-                        <a href="https://github.com/hack-r/googleVis" class="marquee-item">googleVis</a>
-                        <a href="https://github.com/hack-r/GPT-Swarm" class="marquee-item">GPT_Swarm</a>
-                        <a href="https://github.com/hack-r/gptswaRm" class="marquee-item">gptswaRm</a>
-                        <a href="https://github.com/hack-r/hackR" class="marquee-item">hackR</a>
-                        <a href="https://github.com/hack-r/Hamlib" class="marquee-item">Hamlib</a>
-                        <a href="https://github.com/hack-r/Harden_Ubuntu_VPS" class="marquee-item">Harden_Ubuntu</a>
-                        <a href="https://github.com/hack-r/how_much_rain_ii" class="marquee-item">rainfall_model</a>
-                        <a href="https://github.com/hack-r/Ilana" class="marquee-item">Ilana</a>
-                        <a href="https://github.com/hack-r/ILANA1" class="marquee-item">ILANA1</a>
-                        <a href="https://github.com/hack-r/IoT_Data_Science_Pi_Net" class="marquee-item">IoT_Pi_Net</a>
-                        <a href="https://github.com/hack-r/is_that_a_duplicate_quora_question" class="marquee-item">quora_dups</a>
-                        <a href="https://github.com/hack-r/japi" class="marquee-item">japi</a>
-                        <a href="https://github.com/hack-r/java_pinyin_encryption" class="marquee-item">pinyin_encrypt</a>
-                        <a href="https://github.com/hack-r/kaggle_telstra" class="marquee-item">kaggle_telstra</a>
-                        <a href="https://github.com/hack-r/lila" class="marquee-item">lila</a>
-                        <a href="https://github.com/hack-r/Matching" class="marquee-item">Matching</a>
-                        <a href="https://github.com/hack-r/MergeBy" class="marquee-item">MergeBy</a>
-                        <a href="https://github.com/hack-r/ml_project" class="marquee-item">ml_project</a>
-                        <a href="https://github.com/hack-r/MMEES" class="marquee-item">MMEES</a>
-                        <a href="https://github.com/hack-r/mobile_social_network_app" class="marquee-item">mobile_social_app</a>
-                        <a href="https://github.com/hack-r/noisyCricket" class="marquee-item">noisyCricket</a>
-                        <a href="https://github.com/hack-r/OpenBCI_Python" class="marquee-item">OpenBCI_Python</a>
-                        <a href="https://github.com/hack-r/parlerbot" class="marquee-item">parlerbot</a>
-                        <a href="https://github.com/hack-r/pirate" class="marquee-item">pirate</a>
-                        <a href="https://github.com/hack-r/political-diamond" class="marquee-item">political_diamond</a>
-                        <a href="https://github.com/hack-r/practical-quantum-computing" class="marquee-item">quantum_computing</a>
-                        <a href="https://github.com/hack-r/pRedictionstack" class="marquee-item">pRedictionstack</a>
-                        <a href="https://github.com/hack-r/pyserpZotero" class="marquee-item">pyserpZotero</a>
-                        <a href="https://github.com/hack-r/quora" class="marquee-item">quora</a>
-                        <a href="https://github.com/hack-r/R-GraphDB-Demo" class="marquee-item">GraphDB_Demo</a>
-                        <a href="https://github.com/hack-r/raspberry_misc" class="marquee-item">raspberry_misc</a>
-                        <a href="https://github.com/hack-r/realtime-hud" class="marquee-item">realtime_hud</a>
-                        <a href="https://github.com/hack-r/rivierabeach" class="marquee-item">rivierabeach</a>
-                        <a href="https://github.com/hack-r/RMapsDemo" class="marquee-item">RMapsDemo</a>
-                        <a href="https://github.com/hack-r/Rpiday" class="marquee-item">Rpiday</a>
-                        <a href="https://github.com/hack-r/Rpiday2" class="marquee-item">Rpiday2</a>
-                        <a href="https://github.com/hack-r/scholarly" class="marquee-item">scholarly</a>
-                        <a href="https://github.com/hack-r/scikit_learn_binary_classification" class="marquee-item">sklearn_binary</a>
-                        <a href="https://github.com/hack-r/scrapeHelpAReporter" class="marquee-item">scrapeHARO</a>
-                        <a href="https://github.com/hack-r/source2" class="marquee-item">source2</a>
-                        <a href="https://github.com/hack-r/spotify_nerdcore" class="marquee-item">spotify_nerdcore</a>
-                        <a href="https://github.com/hack-r/stackoverflow_comment_sentiment_analysis" class="marquee-item">SO_sentiment</a>
-                        <a href="https://github.com/hack-r/stockfisheR" class="marquee-item">stockfisheR</a>
-                        <a href="https://github.com/hack-r/summary.likert.hackr" class="marquee-item">likert_summary</a>
                         <a href="https://github.com/hack-r/1337_Streamer_for_StackApps" class="marquee-item">1337_Streamer</a>
-                        <a href="https://github.com/hack-r/60seconds_to_deeplearning" class="marquee-item">60s_DeepLearning</a>
-                        <a href="https://github.com/hack-r/academicpages.github.io" class="marquee-item">academicpages</a>
-                        <a href="https://github.com/hack-r/alienDB-public" class="marquee-item">alienDB</a>
-                        <a href="https://github.com/hack-r/ArchiveHaunter" class="marquee-item">ArchiveHaunter</a>
-                        <a href="https://github.com/hack-r/arxiv.py" class="marquee-item">arxiv.py</a>
+                        <a href="https://github.com/hack-r/parlerbot" class="marquee-item">parlerbot</a>
+                        <a href="https://github.com/hack-r/pyserpZotero" class="marquee-item">pyserpZotero</a>
+                        <a href="https://github.com/hack-r/bossbox" class="marquee-item">bossbox</a>
+                        <a href="https://github.com/hack-r/ILANA1" class="marquee-item">ILANA1</a>
+                        <a href="https://github.com/hack-r/GPT-Swarm" class="marquee-item">GPT_Swarm</a>
+                        <a href="https://github.com/hack-r/coursera_shiny" class="marquee-item">coursera_shiny</a>
                     </div>
                 </div>
             </div>
@@ -472,7 +434,6 @@ const html = `<!DOCTYPE html>
                     <a class="entry" href="https://www.zotero.org/hackr/items">
                         <span class="entry-kind">Library</span>
                         <span class="entry-title">Zotero</span>
-                        <p class="entry-note">Public research library on philosophy, economics, and intellectual history.</p>
                     </a>
                     <a class="entry" href="https://whoneeds.it">
                         <span class="entry-kind">Objectivism</span>
