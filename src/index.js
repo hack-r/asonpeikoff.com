@@ -342,7 +342,7 @@ const html = `<!DOCTYPE html>
         <div class="wrap">
             <p class="wordmark"><a href="/">Ason Peikoff</a></p>
             <ul class="nav">
-                <li><a href="#work">Work</a></li>
+                <li><a href="#code">Code</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#elsewhere">Elsewhere</a></li>
             </ul>
@@ -363,9 +363,41 @@ const html = `<!DOCTYPE html>
             </div>
         </section>
 
-        <section id="work" class="rule">
+        <section id="about" class="about rule">
             <div class="wrap">
-                <h2 class="section-title">Selected Work</h2>
+                <h2 class="section-title">About</h2>
+                <p>Philosophy, code, and fiction. Exploring the foundations of individual rights and their expression through technology and narrative.</p>
+                <p>Author of <em>Postsocialist Capitalism: The Rise of Enlightened Individualism</em>.</p>
+            </div>
+        </section>
+
+        <section id="elsewhere" class="rule">
+            <div class="wrap">
+                <h2 class="section-title">Elsewhere</h2>
+                <div class="index">
+                    <a class="entry" href="https://www.zotero.org/hackr/items">
+                        <span class="entry-kind">Library</span>
+                        <span class="entry-title">Zotero</span>
+                    </a>
+                    <a class="entry" href="https://posocap.com">
+                        <span class="entry-kind">Objectivism</span>
+                        <span class="entry-title">Learn</span>
+                    </a>
+                    <a class="entry" href="https://github.com/hack-r">
+                        <span class="entry-kind">Code</span>
+                        <span class="entry-title">GitHub</span>
+                    </a>
+                    <a class="entry" href="https://linkedin.com/in/apeikoff">
+                        <span class="entry-kind">Professional</span>
+                        <span class="entry-title">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="code" class="rule">
+            <div class="wrap">
+                <h2 class="section-title">Code</h2>
                 <div class="marquee-container">
                     <div class="marquee">
                         <a href="https://github.com/hack-r/parlerbot" class="marquee-item">parlerbot</a>
@@ -415,38 +447,6 @@ const html = `<!DOCTYPE html>
                         <a href="https://github.com/hack-r/GPT-Swarm" class="marquee-item">GPT_Swarm</a>
                         <a href="https://github.com/hack-r/coursera_shiny" class="marquee-item">coursera_shiny</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about rule">
-            <div class="wrap">
-                <h2 class="section-title">About</h2>
-                <p>Philosophy, code, and fiction. Exploring the foundations of individual rights and their expression through technology and narrative.</p>
-                <p>Author of <em>Postsocialist Capitalism: The Rise of Enlightened Individualism</em>.</p>
-            </div>
-        </section>
-
-        <section id="elsewhere" class="rule">
-            <div class="wrap">
-                <h2 class="section-title">Elsewhere</h2>
-                <div class="index">
-                    <a class="entry" href="https://www.zotero.org/hackr/items">
-                        <span class="entry-kind">Library</span>
-                        <span class="entry-title">Zotero</span>
-                    </a>
-                    <a class="entry" href="https://whoneeds.it">
-                        <span class="entry-kind">Objectivism</span>
-                        <span class="entry-title">Who Needs It</span>
-                    </a>
-                    <a class="entry" href="https://github.com/hack-r">
-                        <span class="entry-kind">Code</span>
-                        <span class="entry-title">GitHub</span>
-                    </a>
-                    <a class="entry" href="https://linkedin.com/in/apeikoff">
-                        <span class="entry-kind">Professional</span>
-                        <span class="entry-title">LinkedIn</span>
-                    </a>
                 </div>
             </div>
         </section>
