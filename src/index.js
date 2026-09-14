@@ -4,18 +4,18 @@ const html = `<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ason Peikoff</title>
-    <meta name="description" content="Ason Peikoff — Author of Postsocialist Capitalism: The Rise of Enlightened Individualism. Philosophy, code, and fiction.">
+    <meta name="description" content="Ason Peikoff — Philosophy, code, and fiction. Exploring the foundations of individual rights.">
     <meta name="keywords" content="Ason Peikoff, philosophy, capitalism, individualism, machine learning, fiction">
     <meta name="author" content="Ason Peikoff">
     <meta name="color-scheme" content="light dark">
     <link rel="canonical" href="https://asonpeikoff.com/">
     <meta property="og:title" content="Ason Peikoff">
-    <meta property="og:description" content="Author of Postsocialist Capitalism: The Rise of Enlightened Individualism. Philosophy, code, and fiction.">
+    <meta property="og:description" content="Philosophy, code, and fiction. Exploring the foundations of individual rights.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://asonpeikoff.com/">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Ason Peikoff">
-    <meta name="twitter:description" content="Author of Postsocialist Capitalism: The Rise of Enlightened Individualism.">
+    <meta name="twitter:description" content="Philosophy, code, and fiction.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='75' font-size='90' font-weight='bold' text-anchor='middle' font-family='Georgia,serif' fill='%238a5a2b'>A</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,15 +164,13 @@ const html = `<!DOCTYPE html>
             border-left: 3px solid var(--accent);
         }
 
-        .author {
+        .attribution {
             max-width: var(--measure);
-            margin: 1.5rem 0 0;
+            margin: 1rem 0 0;
             font-family: var(--serif);
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: var(--ink-soft);
         }
-
-        .author em { font-style: italic; }
 
         .portrait {
             width: min(100%, 20rem);
@@ -339,7 +337,7 @@ const html = `<!DOCTYPE html>
         }
     </style>
 </head>
-<body data-git-commit="387cf365d79ce5b80e8d97d7469bf372efc18912">
+<body data-git-commit="e946552efcf226ac3ce62a2327ad2f76bfb248aa">
     <header class="masthead">
         <div class="wrap">
             <p class="wordmark"><a href="/">Ason Peikoff</a></p>
@@ -357,7 +355,7 @@ const html = `<!DOCTYPE html>
                 <div>
                     <h1>Ason<br>Peikoff</h1>
                     <blockquote class="lede">"A majority cannot vote away the rights of a minority."</blockquote>
-                    <p class="author">Author of <em>Postsocialist Capitalism: The Rise of Enlightened Individualism</em></p>
+                    <p class="attribution">— Ayn Rand</p>
                 </div>
                 <figure class="portrait">
                     <img src="https://github.com/user-attachments/assets/dd6abc66-0dcd-4f66-8f68-05b65bc55f12" alt="Portrait of Ason Peikoff" decoding="async">
@@ -463,6 +461,7 @@ const html = `<!DOCTYPE html>
             <div class="wrap">
                 <h2 class="section-title">About</h2>
                 <p>Philosophy, code, and fiction. Exploring the foundations of individual rights and their expression through technology and narrative.</p>
+                <p>Author of <em>Postsocialist Capitalism: The Rise of Enlightened Individualism</em>.</p>
             </div>
         </section>
 
