@@ -1,0 +1,11 @@
+name = "asonpeikoff"
+compatibility_date = "2025-09-01"
+
+# Static site: serve everything in public/ as-is (no Worker script).
+[assets]
+directory = "./public"
+
+[env.production]
+routes = [
+  { pattern = "asonpeikoff.com", zone_name = "asonpeikoff.com" }
+]

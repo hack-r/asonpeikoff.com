@@ -1,30 +1,32 @@
 # AsonPeikoff.com
 
-Personal homepage of Ason Peikoff. Plain static site (no framework, no build step), hosted on GitHub Pages.
+Personal homepage of Ason Peikoff. Plain static site (no framework, no build step), served as static assets by Cloudflare Workers.
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `index.html` | The page |
-| `styles.css` | All styling; light/dark via `prefers-color-scheme` |
-| `portrait.jpg` | Portrait (rail + Open Graph image) |
-| `favicon.svg` | "AP" favicon |
-| `CNAME` | Custom domain for GitHub Pages |
+| `public/index.html` | The page |
+| `public/styles.css` | All styling; light/dark via `prefers-color-scheme` |
+| `public/portrait.jpg` | Portrait (rail + Open Graph image) |
+| `public/favicon.svg` | "AP" favicon |
+| `wrangler.toml` | Serves `public/` as static assets (no Worker script) |
 
 ## Local preview
 
 ```bash
-python3 -m http.server 8000
-# open http://localhost:8000
+npx wrangler dev --env=""
+# or: cd public && python3 -m http.server 8000
+```
+
+## Deploy
+
+Cloudflare Workers Builds deploys on push. Manual deploy:
+
+```bash
+npx wrangler deploy --env production
 ```
 
 ## Contact form
 
-Uses [FormSubmit](https://formsubmit.co) (no account). In `index.html`, replace `YOUR_EMAIL` in the form `action`, submit the form once, click the activation email, then replace the address with the random alias FormSubmit provides.
-
-## Deploy (GitHub Pages)
-
-1. Settings → Pages → deploy from the `main` branch, root folder.
-2. DNS: A records for `asonpeikoff.com` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; `www` CNAME → `hack-r.github.io`.
-3. Enable "Enforce HTTPS" once the certificate is issued.
+Uses [FormSubmit](https://formsubmit.co) (no account). Submit the form once, click the activation email, then replace the address in the form `action` with the random alias FormSubmit provides.
