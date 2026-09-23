@@ -1,34 +1,32 @@
 # AsonPeikoff.com
 
-Personal homepage of Ason Peikoff, powered by Cloudflare Workers.
+Personal homepage of Ason Peikoff. Plain static site (no framework, no build step), served as static assets by Cloudflare Workers.
 
-## Deployment
+## Files
 
-### Prerequisites
-- Node.js 18+
-- Wrangler CLI: `npm install -g wrangler`
-- Cloudflare account
+| File | Purpose |
+|---|---|
+| `public/index.html` | The page |
+| `public/styles.css` | All styling; light/dark via `prefers-color-scheme` |
+| `public/portrait.jpg` | Portrait (rail + Open Graph image) |
+| `public/favicon.svg` | "AP" favicon |
+| `wrangler.toml` | Serves `public/` as static assets (no Worker script) |
 
-### Deploy
-
-```bash
-npm install
-wrangler deploy
-```
-
-## Development
-
-Serve locally:
+## Local preview
 
 ```bash
-wrangler dev
+npx wrangler dev --env=""
+# or: cd public && python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8787`
+## Deploy
 
-## Structure
+Cloudflare Workers Builds deploys on push. Manual deploy:
 
-- `index.html` - Main homepage (single source of truth for markup)
-- `style.css` - Styling, served at `/style.css`
-- `src/index.js` - Cloudflare Worker entry point; imports the two files above as text, so there is no duplicated copy of the page
-- `wrangler.toml` - Wrangler configuration (the `[[rules]]` block enables the text imports)
+```bash
+npx wrangler deploy --env production
+```
+
+## Contact form
+
+Uses [FormSubmit](https://formsubmit.co) (no account). Submit the form once, click the activation email, then replace the address in the form `action` with the random alias FormSubmit provides.

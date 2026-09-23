@@ -1,11 +1,9 @@
 name = "asonpeikoff"
-main = "src/index.js"
-compatibility_date = "2023-12-01"
+compatibility_date = "2025-09-01"
 
-[[rules]]
-type = "Text"
-globs = ["**/*.html", "**/*.css"]
-fallthrough = true
+# Static site: serve everything in public/ as-is (no Worker script).
+[assets]
+directory = "./public"
 
 [env.production]
 routes = [

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ason Peikoff — Philosophy, Code, Fiction</title>
+  <meta name="description" content="Ason Peikoff — philosophy, code, and fiction. Exploring the foundations of individual rights and their expression through technology and narrative. Author of Postsocialist Capitalism: The Rise of Enlightened Individualism.">
+  <meta name="author" content="Ason Peikoff">
+  <meta name="color-scheme" content="dark light">
+  <link rel="canonical" href="https://asonpeikoff.com/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://asonpeikoff.com/">
+  <meta property="og:title" content="Ason Peikoff — Philosophy, Code, Fiction">
+  <meta property="og:description" content="Philosophy, code, and fiction. Exploring the foundations of individual rights and their expression through technology and narrative.">
+  <meta property="og:image" content="https://asonpeikoff.com/portrait.jpg">
+  <meta property="og:image:alt" content="Portrait of Ason Peikoff">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ason Peikoff — Philosophy, Code, Fiction">
+  <meta name="twitter:description" content="Philosophy, code, and fiction.">
+  <meta name="twitter:image" content="https://asonpeikoff.com/portrait.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="rail">
+      <div class="rail-head">
+        <img class="portrait" src="portrait.jpg" alt="Portrait of Ason Peikoff" width="236" height="236">
+        <div class="identity">
+          <h1 class="name">Ason Peikoff</h1>
+          <p class="tagline">Philosophy, code, and fiction.</p>
+        </div>
+      </div>
+      <nav class="links" aria-label="Profiles">
+        <a href="https://github.com/hack-r">GitHub #1<span class="arrow" aria-hidden="true">↗</span></a>
+        <a href="https://github.com/posocap">GitHub #2<span class="arrow" aria-hidden="true">↗</span></a>
+        <a href="https://linkedin.com/in/apeikoff">LinkedIn<span class="arrow" aria-hidden="true">↗</span></a>
+        <a href="https://www.zotero.org/hackr/items">Zotero<span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+      <p class="copyright">© 2026 Ason Peikoff</p>
+    </aside>
+
+    <main class="main">
+      <section class="band quote">
+        <blockquote>“A majority cannot vote away the rights of a <span class="accent">minority</span>.”</blockquote>
+        <p class="attribution">— Ayn Rand</p>
+      </section>
+
+      <section class="band about">
+        <p>Philosophy, code, and fiction. Exploring the foundations of individual rights and their expression through technology and narrative.</p>
+        <p>Author of <em>Postsocialist Capitalism: The Rise of Enlightened Individualism</em>.</p>
+      </section>
+
+      <section class="band sections" aria-label="Sections">
+        <div class="cell">
+          <span class="numeral" aria-hidden="true">I</span>
+          <span class="label">Code</span>
+        </div>
+        <div class="cell">
+          <span class="numeral" aria-hidden="true">II</span>
+          <span class="label">Fiction</span>
+          <span class="note">Link to come</span>
+        </div>
+        <a class="cell" href="https://posocap.com">
+          <span class="numeral" aria-hidden="true">III</span>
+          <span class="label">Philosophy</span>
+          <span class="link">posocap.com ↗</span>
+        </a>
+      </section>
+
+      <section class="band contact" id="contact">
+        <h2 class="contact-label">Contact</h2>
+        <!-- FormSubmit: after the first submission, click the activation email, then swap in the
+             random alias FormSubmit gives you so the address isn't exposed. -->
+        <form class="contact-form" action="https://formsubmit.co/asonpeikoff@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Name" aria-label="Name" autocomplete="name" required>
+          <input type="email" name="email" placeholder="Email" aria-label="Email" autocomplete="email" required>
+          <textarea name="message" placeholder="Message" aria-label="Message" rows="3" required></textarea>
+          <input type="hidden" name="_subject" value="New message from AsonPeikoff.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <input type="hidden" name="_next" value="https://asonpeikoff.com/#sent">
+          <button type="submit">Send <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="sent" id="sent" role="status">Thanks — message sent.</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    // Mark the form as submitted on the first attempt so :invalid styling only shows after a submit.
+    (function () {
+      var form = document.querySelector('.contact-form');
+      form.querySelector('button').addEventListener('click', function () {
+        form.classList.add('submitted');
+      });
+    })();
+  </script>
+</body>
+</html>
