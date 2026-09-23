@@ -1,11 +1,12 @@
-name = "asonpeikoff"
+name = "asonpeikoff-com"
 compatibility_date = "2025-09-01"
+
+# Custom Domains: Cloudflare creates and manages the DNS records and certificates.
+routes = [
+  { pattern = "asonpeikoff.com", custom_domain = true },
+  { pattern = "www.asonpeikoff.com", custom_domain = true }
+]
 
 # Static site: serve everything in public/ as-is (no Worker script).
 [assets]
 directory = "./public"
-
-[env.production]
-routes = [
-  { pattern = "asonpeikoff.com", zone_name = "asonpeikoff.com" }
-]
