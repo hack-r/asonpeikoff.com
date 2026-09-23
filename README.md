@@ -1,34 +1,30 @@
 # AsonPeikoff.com
 
-Personal homepage of Ason Peikoff, powered by Cloudflare Workers.
+Personal homepage of Ason Peikoff. Plain static site (no framework, no build step), hosted on GitHub Pages.
 
-## Deployment
+## Files
 
-### Prerequisites
-- Node.js 18+
-- Wrangler CLI: `npm install -g wrangler`
-- Cloudflare account
+| File | Purpose |
+|---|---|
+| `index.html` | The page |
+| `styles.css` | All styling; light/dark via `prefers-color-scheme` |
+| `portrait.jpg` | Portrait (rail + Open Graph image) |
+| `favicon.svg` | "AP" favicon |
+| `CNAME` | Custom domain for GitHub Pages |
 
-### Deploy
-
-```bash
-npm install
-wrangler deploy
-```
-
-## Development
-
-Serve locally:
+## Local preview
 
 ```bash
-wrangler dev
+python3 -m http.server 8000
+# open http://localhost:8000
 ```
 
-Then visit `http://localhost:8787`
+## Contact form
 
-## Structure
+Uses [FormSubmit](https://formsubmit.co) (no account). In `index.html`, replace `YOUR_EMAIL` in the form `action`, submit the form once, click the activation email, then replace the address with the random alias FormSubmit provides.
 
-- `index.html` - Main homepage (single source of truth for markup)
-- `style.css` - Styling, served at `/style.css`
-- `src/index.js` - Cloudflare Worker entry point; imports the two files above as text, so there is no duplicated copy of the page
-- `wrangler.toml` - Wrangler configuration (the `[[rules]]` block enables the text imports)
+## Deploy (GitHub Pages)
+
+1. Settings → Pages → deploy from the `main` branch, root folder.
+2. DNS: A records for `asonpeikoff.com` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; `www` CNAME → `hack-r.github.io`.
+3. Enable "Enforce HTTPS" once the certificate is issued.

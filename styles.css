@@ -1,0 +1,296 @@
+/* AsonPeikoff.com — option 2d "Rail" */
+
+:root {
+  /* Dark (as designed) */
+  --ground: #1a1817;
+  --ink: #f3f2f2;
+  --muted: #a09b99;
+  --hairline: #3a3634;
+  --portrait-bg: #2a2725;
+  --accent: #ec3013;
+  --button-hover: #ff4a2a;
+  --button-active: #d42a10;
+  --selection: rgba(236, 48, 19, 0.35);
+
+  --font: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --rule-major: 2px solid var(--ink);
+  --rule-minor: 1px solid var(--hairline);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --ground: #f3f2f2;
+    --ink: #201e1d;
+    --muted: #6b6766;
+    --hairline: #c9c6c5;
+    --portrait-bg: #eae9e9;
+    --button-hover: #c82408;
+    --button-active: #a51d06;
+    --selection: rgba(236, 48, 19, 0.25);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--selection); color: var(--ink); }
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
+
+:focus { outline: none; }
+:focus-visible { outline: 2px solid #ec3013; outline-offset: 2px; }
+
+p, h1, h2, blockquote { margin: 0; }
+
+/* ---------- Layout ---------- */
+
+.page {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  max-width: 1440px;
+  min-height: 100vh;
+}
+
+/* ---------- Rail ---------- */
+
+.rail {
+  padding: 40px 32px;
+  border-right: var(--rule-major);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.1);
+  background: var(--portrait-bg);
+}
+
+.identity { display: flex; flex-direction: column; gap: 6px; }
+
+.name {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.tagline { font-size: 15px; color: var(--muted); }
+
+.links {
+  border-top: var(--rule-major);
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.links a {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: var(--rule-minor);
+}
+
+.arrow { color: var(--accent); }
+
+.copyright { margin-top: auto; font-size: 13px; color: var(--muted); }
+
+/* ---------- Main ---------- */
+
+.main { display: flex; flex-direction: column; min-width: 0; }
+
+.band { border-bottom: var(--rule-major); }
+.band:last-child { border-bottom: 0; }
+
+.accent { color: var(--accent); }
+
+/* Quote */
+.quote {
+  padding: 64px 56px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quote blockquote {
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-wrap: pretty;
+}
+
+.attribution { font-size: 16px; color: var(--muted); }
+
+/* About */
+.about {
+  padding: 32px 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about p { font-size: 19px; line-height: 1.5; text-wrap: pretty; }
+
+/* Sections */
+.sections {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cell {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cell:first-child { padding-left: 56px; }
+.cell + .cell { border-left: var(--rule-minor); }
+
+.numeral {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.label { font-size: 20px; font-weight: 600; }
+.note { font-size: 15px; color: var(--muted); }
+.link { font-size: 15px; font-weight: 600; }
+
+/* Contact */
+.contact {
+  padding: 32px 56px 48px;
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 32px;
+}
+
+.contact-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding-top: 14px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font: inherit;
+  font-size: 16px;
+  padding: 12px;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+  background: var(--ground);
+  color: var(--ink);
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.contact-form ::placeholder { color: var(--muted); opacity: 1; }
+
+.contact-form textarea { grid-column: span 2; resize: vertical; }
+
+.contact-form.submitted input:invalid,
+.contact-form.submitted textarea:invalid { border-color: var(--accent); }
+
+.contact-form .honey { display: none; }
+
+.contact-form button {
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  width: 240px;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 0;
+  background: var(--accent);
+  color: var(--ground);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.contact-form button:hover { background: var(--button-hover); }
+.contact-form button:active { background: var(--button-active); }
+
+.sent {
+  display: none;
+  font-size: 16px;
+  padding-top: 14px;
+}
+
+.sent:target { display: block; }
+.contact:has(.sent:target) .contact-form { display: none; }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .page { grid-template-columns: minmax(0, 1fr); }
+
+  .rail {
+    padding: 24px;
+    border-right: 0;
+    border-bottom: var(--rule-major);
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    column-gap: 24px;
+    row-gap: 24px;
+    align-items: center;
+  }
+
+  .portrait { width: 120px; height: 120px; }
+  .links, .copyright { grid-column: 1 / -1; }
+  .copyright { margin-top: 0; }
+
+  .quote { padding: 40px 24px 32px; }
+
+  .about {
+    padding: 24px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .sections { grid-template-columns: minmax(0, 1fr); }
+  .cell, .cell:first-child { padding: 24px; }
+  .cell + .cell { border-left: 0; border-top: var(--rule-minor); }
+
+  .contact {
+    padding: 24px 24px 40px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .contact-label { padding-top: 0; }
+  .contact-form { grid-template-columns: minmax(0, 1fr); }
+  .contact-form textarea { grid-column: auto; }
+  .contact-form button { width: 100%; }
+  .sent { padding-top: 0; }
+}
