@@ -10,12 +10,12 @@ Personal homepage of Ason Peikoff. Plain static site (no framework, no build ste
 | `public/styles.css` | All styling; light/dark via `prefers-color-scheme` |
 | `public/portrait.jpg` | Portrait (rail + Open Graph image) |
 | `public/favicon.svg` | "AP" favicon |
-| `wrangler.toml` | Serves `public/` as static assets (no Worker script) |
+| `wrangler.toml` | Serves `public/` as static assets; binds `asonpeikoff.com` and `www` as Custom Domains (DNS managed by Cloudflare) |
 
 ## Local preview
 
 ```bash
-npx wrangler dev --env=""
+npx wrangler dev
 # or: cd public && python3 -m http.server 8000
 ```
 
@@ -24,7 +24,7 @@ npx wrangler dev --env=""
 Cloudflare Workers Builds deploys on push. Manual deploy:
 
 ```bash
-npx wrangler deploy --env production
+npx wrangler deploy
 ```
 
 ## Contact form
